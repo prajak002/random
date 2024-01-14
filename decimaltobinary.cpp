@@ -1,22 +1,19 @@
-//  binary to decimal conversion
+//  Decimal to binary conversion
 
  #include<bits/stdc++.h>
   using namespace std;
  
+  string converter(int n)
+  {
+       bitset<5>db(n);// convert decimal to binary in bitset
+       return db.to_string();
+       
+  }
+  
   int main()
   {
-       string s;
-       cin>>s;
-       int base = 1;
-       int ans =0;
-       for(int i = s.length()-1; i>=0; i--)
-       {
-           if(s[i]=='1')
-           {
-              ans+=base;
-           }
-           base*=2;
-       }
-       cout<<ans<<endl;
-      
+       int n; 
+       cin>> n;
+       cout<<converter(n);
+       
   }
